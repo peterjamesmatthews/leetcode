@@ -34,5 +34,13 @@ def test_many_valid_pairs(s: Solution):
     assert s.isValid("[]{}()" * 100) == True
 
 
-def test_open_with_closer(s: Solution):
+def test_mismatch_closer_opener(s: Solution):
     assert s.isValid("}[") == False
+
+
+def test_matched_closer_opener(s: Solution):
+    assert s.isValid("][") == False
+
+
+def test_closers(s: Solution):
+    assert s.isValid("}]") == False

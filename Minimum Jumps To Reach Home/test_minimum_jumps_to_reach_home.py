@@ -1,6 +1,5 @@
-from pytest import fixture
-
 from minimum_jumps_to_reach_home import Solution
+from pytest import fixture
 
 
 @fixture

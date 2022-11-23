@@ -47,6 +47,4 @@ class Solution:
                 if len(openers) == 0 or Solution._CLOSERS_[char] != openers[-1]:
                     return False
                 openers.pop()
-        if len(openers) != 0:
-            return False
         return True
