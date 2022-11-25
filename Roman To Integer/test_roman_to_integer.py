@@ -30,3 +30,15 @@ def test_MCMXCIV(s: Solution):
 
 def test_MMMCMXCIX(s: Solution):
     assert s.romanToInt("MMMCMXCIX") == 3999
+
+
+def test_XLV(s: Solution):
+    assert s.romanToInt("XLV") == 45
+
+
+def test_CDXLV(s: Solution):
+    assert s.romanToInt("CDXLV") == 445
+
+
+def test_CXLV(s: Solution):
+    assert s.romanToInt("CXLV") == 145
