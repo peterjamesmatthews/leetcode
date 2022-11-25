@@ -4,6 +4,9 @@
 # python
 __pycache__
 
+# pyenv-virtualenv
+.python-version
+
 # coverage
 .coverage
 coverage.xml
