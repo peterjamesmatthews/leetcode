@@ -1,7 +1,7 @@
 """
 Given a string `s`, find the length of the longest substring without repeating characters.
 """
-from typing import Set
+from typing import Dict
 
 
 class Solution:
@@ -40,22 +40,17 @@ class Solution:
         max_len = 0  # running maximum length of substring
         start = 0  # starting index of substring
         end = 0  # ending index of substring
-        chars: Set[str] = set()  # set to hold members of substring
+        chars: Dict[str, None] = {}  # dict to hold members of substring
         while end < len(s):  # O(len(s))
-            if s[end] in chars:  # repeated character is about to enter substring
-                max_len = max(
-                    len(chars), max_len
-                )  # compare current substring's length to running maximum
-                while (
-                    s[start] != s[end]
-                ):  # advance the substring's start until repeated character is found
-                    chars.remove(
-                        s[start]
-                    )  # characters exiting the substring don't need to be tracked
-                    start += 1  # advance the substring's start
-                else:  # s[start] == s[end]
-                    start += 1  # advance the substring's start
-            chars.add(s[end])
+            if s[end] in chars:
+                # end of this substring, compare length to maximum
+                max_len = max(len(chars), max_len)
+                # pop characters off front of substring, until repeated character is popped
+                while s[start] != s[end]:
+                    del chars[s[start]]
+                    start += 1
+                start += 1
+            chars[s[end]] = None
             end += 1  # grow the substring
         else:
             max_len = max(
