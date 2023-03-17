@@ -1,6 +1,5 @@
+from problem_name import Solution  # TODO replace PROBLEM_NAME
 from pytest import fixture
-
-from PROBLEM_NAME import Solution  # TODO replace PROBLEM_NAME
 
 
 @fixture
