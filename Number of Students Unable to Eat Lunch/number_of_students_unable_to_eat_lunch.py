@@ -3,11 +3,6 @@ from typing import List
 
 class Solution:
     def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
-        if len(students) != len(sandwiches):
-            raise ValueError(
-                f"number of students and sandwiches are not equal: {len(students)} != {len(sandwiches)}"
-            )
-
         i_front = 0
         misses = 0
         while len(students) > 0:
