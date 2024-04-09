@@ -1,5 +1,5 @@
 from typing import List
-from solution import Solution
+from network_delay_time import Solution
 import pytest
 
 
