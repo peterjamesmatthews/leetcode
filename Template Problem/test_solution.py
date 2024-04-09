@@ -9,9 +9,7 @@ def s() -> Solution:
 
 @pytest.mark.parametrize(
     "want",
-    [
-        # pytest.param(*args, want, id="<test case id>")
-    ],
+    [pytest.param(0, id="<test case id>")],
 )
 def test_solution(s: Solution, want):
     # got = s.<method>(...)
