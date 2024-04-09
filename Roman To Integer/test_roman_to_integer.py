@@ -42,3 +42,11 @@ def test_CDXLV(s: Solution):
 
 def test_CXLV(s: Solution):
     assert s.romanToInt("CXLV") == 145
+
+
+def test_X(s: Solution):
+    assert s.romanToInt("X") == 10
+
+
+def test_D(s: Solution):
+    assert s.romanToInt("D") == 500
