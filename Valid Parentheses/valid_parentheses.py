@@ -5,7 +5,7 @@ An input string is valid if:
 
 Open brackets must be closed by the same type of brackets.
 Open brackets must be closed in the correct order.
- 
+
 
 Example 1:
 Input: s = "()"
@@ -17,7 +17,7 @@ Output: true
 
 Example 3:
 Input: s = "(]"
-Output: false 
+Output: false
 
 Constraints:
 
@@ -27,7 +27,6 @@ s consists of parentheses only '()[]{}'.
 
 
 class Solution:
-
     _CLOSERS_ = {
         ")": "(",
         "]": "[",

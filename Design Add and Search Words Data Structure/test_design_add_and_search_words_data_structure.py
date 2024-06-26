@@ -12,16 +12,16 @@ def test_example(wd: WordDictionary):
     wd.addWord("dad")
     wd.addWord("mad")
 
-    assert wd.search("pad") == False
-    assert wd.search("bad") == True
-    assert wd.search(".ad") == True
-    assert wd.search("..d") == True
+    assert wd.search("pad") is False
+    assert wd.search("bad") is True
+    assert wd.search(".ad") is True
+    assert wd.search("..d") is True
 
 
 def test_empty(wd: WordDictionary):
-    assert wd.search("foo") == False
-    assert wd.search(".") == False
-    assert wd.search("...") == False
+    assert wd.search("foo") is False
+    assert wd.search(".") is False
+    assert wd.search("...") is False
 
 
 def test_f(wd: WordDictionary):

@@ -39,7 +39,7 @@ Output: 2
 Explanation: Sensor 1 has the correct values.
 The fourth data point from sensor 1 is dropped, and the last value of sensor 1 is
 replaced by a 7.
- 
+
 
 Constraints:
 

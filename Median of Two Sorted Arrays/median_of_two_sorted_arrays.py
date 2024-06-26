@@ -5,7 +5,6 @@ sorted arrays.
 The overall run time complexity should be O(log (m+n)).
 """
 
-
 from typing import List
 
 

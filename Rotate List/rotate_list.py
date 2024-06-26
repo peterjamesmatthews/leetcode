@@ -1,4 +1,5 @@
-from typing import Optional, List
+from typing import List, Optional
+
 
 # Definition for singly-linked list.
 class ListNode:
@@ -7,12 +8,12 @@ class ListNode:
         self.next: Optional[ListNode] = next
 
     def __repr__(self):
-        return f"<{self.val} -> {self.next.val if self.next != None else None}>"
+        return f"<{self.val} -> {self.next.val if self.next is not None else None}>"
 
     def __str__(self):
         s = []
         curr = self
-        while curr != None:
+        while curr is not None:
             s.append(curr.val)
             curr = curr.next
         return str(s)
@@ -25,14 +26,14 @@ class Solution:
             return head
 
         # convert ListNodes to list of ListNodes
-        l: List[ListNode] = []
+        nodes: List[ListNode] = []
         curr = head
-        while curr != None:
-            l.append(curr)
+        while curr is not None:
+            nodes.append(curr)
             curr = curr.next
 
         # shift list
-        l[-1].next = l[0]
-        k = k % len(l)
-        l[-k - 1].next = None
-        return l[-k]  # return new head
+        nodes[-1].next = nodes[0]
+        k = k % len(nodes)
+        nodes[-k - 1].next = None
+        return nodes[-k]  # return new head

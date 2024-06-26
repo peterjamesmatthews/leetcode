@@ -1,5 +1,3 @@
-from random import randint, seed
-
 from can_place_flowers import Solution
 from pytest import fixture
 

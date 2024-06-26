@@ -1,0 +1,2 @@
+pipenv run ruff check
+pipenv run ruff format --check

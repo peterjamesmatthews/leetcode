@@ -18,6 +18,7 @@ Constraints:
 0 <= strs[i].length <= 200
 strs[i] consists of only lowercase English letters.
 """
+
 from typing import List
 
 
@@ -30,5 +31,6 @@ class Solution:
                 for string in strs[1:]:  # compare chars from subsequent strings
                     assert string[len(prefix)] == char
                 prefix += char  # each string contains char, add it to prefix
-            except:  # most likely index of out bounds or assertion
+            except (IndexError, AssertionError):
+                # most likely index of out bounds or assertion
                 return prefix

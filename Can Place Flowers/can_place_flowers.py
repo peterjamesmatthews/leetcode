@@ -6,6 +6,7 @@ Given an integer array flowerbed containing 0's and 1's, where 0 means empty and
 and an integer n, return if n new flowers can be planted in the flowerbed without violating the
 no-adjacent-flowers rule.
 """
+
 from math import floor
 from typing import List
 
@@ -116,9 +117,7 @@ class Solution:
                                 lambda flower: str(flower),  # step 2
                                 [0, *flowerbed, 0],  # step 1
                             )
-                        ).split(
-                            "1"
-                        ),  # step 4
+                        ).split("1"),  # step 4
                     ),
                 ),
             )
