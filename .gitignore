@@ -1,18 +1,6 @@
-# pytest
-.pytest_cache
-
-# python
-__pycache__
-
-# pyenv-virtualenv
-.python-version
-
-# coverage
-.coverage
-coverage.xml
-
-# macOS
 .DS_Store
-
-# npm
-node_modules
+.coverage
+.pytest_cache
+.python-version
+__pycache__
+coverage.xml
