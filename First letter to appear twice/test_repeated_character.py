@@ -13,10 +13,14 @@ def s() -> Solution:
     [
         pytest.param("asdfjkl;a", "a", None, id="empty str"),
         pytest.param("abcdd", "d", None, id="abcdd"),
-        pytest.param("", "d", ValueError("s must contain one repeat letter"), id="empty str"),
+        pytest.param(
+            "", "d", ValueError("s must contain one repeat letter"), id="empty str"
+        ),
     ],
 )
-def test_solution(s: Solution, input: str, want: Optional[Exception], err: Optional[Exception]):
+def test_solution(
+    s: Solution, input: str, want: Optional[Exception], err: Optional[Exception]
+):
     try:
         got = s.repeatedCharacter(input)
         assert got == want, f"got != want, {got} != {want}"
